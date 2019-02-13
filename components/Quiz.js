@@ -164,6 +164,7 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     alignSelf: 'center',
+    fontSize: 20,
   },
   noContent: {
     flex: 2,
