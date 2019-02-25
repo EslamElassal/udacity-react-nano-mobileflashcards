@@ -1,39 +1,63 @@
-# Mobile Flashcards Project
+# Mobile Flashcards
+Mobile Flashcards is a native mobile application for creating and reviewing flashcards, originally developed as one of three project's required for Udacity's React Developer Nanodegree program.
 
-The Mobile Flashcards Project is my third and final Udacity React Developer Nanodegree project. The project features a native application which features 1) the ability to create your own flashcard decks, 2) add unlimited flashcards to your decks, 3) delete old decks, 4) and quiz yourself with any deck, which will return a knowledge score. The project contains views for: your deck list, an individual deck, add new deck, add new card, and the quiz. Once a quiz has been started, the user will be faced with an active quiz -if the deck contains at least one card- or a screen prompting the addition of a card to the deck -if no cards are currently in the deck. Once a quiz has been completed (all cards from the deck have been answered as either knowing 'correct' or 'incorrect'), a score will be displayed showing how many cards the tester answered 'correct' out of the total number of cards.
+The project features:
+* Ability to create your own flashcard decks
+* Unlimited flashcards (Q/A flip cards) for each deck
+* Deck quizzes that present a knowledge score upon completion
 
-App Data is stored through React Native's AsyncStorage and managed with Redux
+The project contains views for:
+* Deck list
+* Individual deck
+* Create new deck
+* Add new card
+* Deck Quiz
 
-The [Create React Native App](https://github.com/react-community/create-react-native-app) is used to bootstrap the project.
+Once a quiz has been started, the user will be faced with an active quiz -if the deck contains at least one card- or a screen prompting the addition of a card to the deck -if no cards are currently in the deck. Once a quiz has been completed (all cards from the deck have been answered as either known 'correct' or 'incorrect'), a score will be displayed showing how many cards the quizzer answered 'correct' out of the total number of cards.
 
-## TL;DR
+App data is stored through React Native's AsyncStorage and managed with Redux
 
-To get started building your flashcard decks right away:
+The [Create React Native App](https://github.com/react-community/create-react-native-app) was used to bootstrap the project.
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+## Installation
+To start building your flashcard decks, first install all project dependencies:
 
-## What You're Getting
+```
+npm install
+```
+Then, run the development server with:
+```
+npm start
+```
+Navigate to:
+```
+localhost:19002
+```
+In the sidebar under 'Connection', select the 'Tunnel' tab.
+
+Scan the QR code with the Expo app (Android) or the Camera app (iOS).
+
+## File Breakdown
 ```bash
 ├── README.md - This file.
-├── package.json # Npm package manager file. It's unlikely that you'll need to modify this.
-├── app.json # 
-├── App.js # 
+├── package.json # npm package manager file
+├── app.json # native application config file for app stores
+├── App.js # This is the root of your app
 ├── actions
-│   └── index.js # Redux actions index
+│   └── index.js # File containing redux actions
 ├── reducers
-│   └── index.js # Redux reducer index
+│   └── index.js # File containing redux reducers
 ├── utils
-│   ├── api.js # API for accessing data in AsyncStorage
-│   └── colors.js # Helper file with HEX codes for primary colors
+│   ├── api.js # API created to access data in AsyncStorage
+│   └── colors.js # Helper file with HEX codes for common colors
 └── components
     ├── AddCard.js # View for adding new flashcards to decks
     ├── AddDeck.js # View for adding a new deck
     ├── BaseInput.js # Pre-styled TextInput component
-    ├── Btn.js # Pre-styles TouchOpacity component
+    ├── Btn.js # Pre-styled TouchOpacity component
     ├── Deck.js # View for an individual deck; add card, start quiz, delete deck
     ├── DeckList.js # View your list of decks
-    └── Quiz.js # View for taking a deck quiz; flip card, view score, restart quiz
+    └── Quiz.js # View for taking a deck quiz; flip card, answer card, view score, restart quiz
 ```
 
 ## Data
